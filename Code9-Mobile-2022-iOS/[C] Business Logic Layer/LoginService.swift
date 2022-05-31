@@ -4,14 +4,13 @@
 //
 //  Created by Zolt Varga on 4/24/22.
 //
-
 import Foundation
 
 class LoginService {
     
     static func isValideUsername(text: String) -> Bool {
-//        return true
-         return text.count > 5
+        return true
+        // return text.count > 5
     }
     
     static func isValidePassword(text: String) -> Bool {
@@ -21,7 +20,7 @@ class LoginService {
         // least one symbol
         //  min 8 characters total
         let password = text.trimmingCharacters(in: CharacterSet.whitespaces)
-        let passwordRegx = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&<>*~:`-]).{8,}$"
+        let passwordRegx = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&<>*~:`-]).{7,}$"
         let passwordCheck = NSPredicate(format: "SELF MATCHES %@", passwordRegx)
         return passwordCheck.evaluate(with: password)
         

@@ -22,7 +22,7 @@ class LoginView: UIView {
     
     lazy var userNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Username"
+        label.text = "Username:"
         label.font = .systemFont(ofSize: 30)
         label.textColor = .systemBlue
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -33,7 +33,7 @@ class LoginView: UIView {
     
     lazy var passwordLabel: UILabel = {
         let label = UILabel()
-        label.text = "Password"
+        label.text = "Password:"
         label.font = .systemFont(ofSize: 30)
         label.textColor = .systemBlue
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -71,7 +71,7 @@ class LoginView: UIView {
     lazy var loginButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .systemBlue
-        button.setTitle("Login", for: .normal)
+        button.setTitle("Loggin", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 25)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 20
